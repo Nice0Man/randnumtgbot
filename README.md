@@ -1,1 +1,1 @@
-#Bot which returns random number EEEE
+#Bot which returns random number.
