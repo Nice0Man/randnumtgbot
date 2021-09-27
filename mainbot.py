@@ -142,8 +142,9 @@ async def commands_mess(message: types.Message):
 
 
 # hidden command which returning random joke
-@dp.callback_query_handler(text='joke')
-async def get_random_joke(call: types.CallbackQuery):
+# hidden command which returning random joke
+@dp.message_handler(commands=["joke"])
+async def get_random_joke(message: types.Message):
 	random_page_number = str(random.randint(1, 619))
 	webpage = requests.get(URL_SITE_WITH_JOKES + random_page_number + '/').text
 	tags = BeautifulSoup(webpage, 'html.parser').find_all('p')
@@ -153,8 +154,7 @@ async def get_random_joke(call: types.CallbackQuery):
 		if tag_text == '\n':
 			break
 		jokes.append(tag_text)
-	await call.message.answer(random.choice(jokes[1:-1]))
-	await call.answer()
+	await message.answer(random.choice(jokes[1:-1]))
 
 
 # bot pooling
