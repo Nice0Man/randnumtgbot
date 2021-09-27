@@ -1,5 +1,5 @@
-TOKEN = '2015120145:AAF879YzgpJIJi-8KeampjuWd4x4Kwe_8-E'
-URL_SITE_WITH_JOKES = 'https://anekdoty.ru/bestyear/page/'
+TOKEN = 'YOUR_BOT_TOKEN'
+URL_SITE_WITH_JOKES = 'URL_SITE' # you may have to change the function code in main file
 text = [
 	"Привет!",
 	"Я бот, который поможет тебе выбрать случайное число.",
