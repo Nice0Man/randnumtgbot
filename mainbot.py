@@ -142,7 +142,6 @@ async def commands_mess(message: types.Message):
 
 
 # hidden command which returning random joke
-# hidden command which returning random joke
 @dp.message_handler(commands=["joke"])
 async def get_random_joke(message: types.Message):
 	random_page_number = str(random.randint(1, 619))
