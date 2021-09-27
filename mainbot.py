@@ -11,7 +11,7 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import logging
 import random
 
-# initialisation dynamic libraries for keyboards
+# initialisation dynamic dictionaries for keyboards
 chat_data = {}
 status_callback_data = CallbackData("number", "action")
 
