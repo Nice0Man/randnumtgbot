@@ -55,7 +55,7 @@ async def update_random_number(message: types.Message, value: int):
 		await message.edit_text(text=f"Текущее значение границы: {value}", reply_markup=edit_number_tab_keyboard())
 
 
-# changing message after click on first inline button
+# changing message after click on the first inline button
 @dp.callback_query_handler(status_callback_data.filter(action=["set_brpoint"]))
 async def set_keyboard(call: types.CallbackQuery):
 	user_value = chat_data.get(call.from_user.id, 0)
